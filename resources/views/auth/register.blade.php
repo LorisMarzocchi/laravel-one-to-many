@@ -51,7 +51,8 @@
         <div class="mb-3">
             <label for="password_confirmation" class="form-label">Password Confirmation</label>
             <input
-            type="password_confirmation"
+            {{-- type="password_confirmation" --}}
+            type="password"
             class="form-control"
             id="password_confirmation"
             name="password_confirmation"

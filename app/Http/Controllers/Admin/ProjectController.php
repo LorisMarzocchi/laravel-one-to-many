@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -11,6 +12,7 @@ class ProjectController extends Controller
 
     private $validation = [
         'title' => 'required|string|max:50',
+        'type_id' => 'required|integer|exists:types,id',
         'url_image' => 'required|url|max:250',
         'description' => 'required|string',
         'languages' => 'required|string|max:50',
@@ -21,6 +23,7 @@ class ProjectController extends Controller
         'min'    => 'il campo :attribute deve avere :min carattri',
         'max'    => 'il campo :attribute deve avere :max carattri',
         'url'   => 'il campo è obbligatorio',
+        'exists' => 'Valore non accetato'
     ];
 
     /**
@@ -41,7 +44,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = Type::all();
+        return view('admin.projects.create', compact('types'));
     }
 
     /**
@@ -73,11 +77,12 @@ class ProjectController extends Controller
         $data= $request->all();
 
         $newProject = new Project();
-        $newProject->title = $data['title'];
-        $newProject->url_image = $data['url_image'];
-        $newProject->description = $data['description'];
-        $newProject->languages = $data['languages'];
-        $newProject->link_github = $data['link_github'];
+        $newProject->title          = $data['title'];
+        $newProject->type_id        = $data['type_id'];
+        $newProject->url_image      = $data['url_image'];
+        $newProject->description    = $data['description'];
+        $newProject->languages      = $data['languages'];
+        $newProject->link_github    = $data['link_github'];
         $newProject->save();
 
         return to_route('admin.projects.show', ['project' => $newProject]);
@@ -102,7 +107,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $types = Type::all();
+
+        return view('admin.projects.edit', compact('project', 'types'));
     }
 
     /**
@@ -120,6 +127,7 @@ class ProjectController extends Controller
 
 
         $project->title = $data['title'];
+        $project->type_id = $data['type_id'];
         $project->url_image = $data['url_image'];
         $project->description = $data['description'];
         $project->languages = $data['languages'];

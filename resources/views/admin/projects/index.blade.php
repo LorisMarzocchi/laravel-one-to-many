@@ -28,6 +28,7 @@
         <thead>
             <tr>
                 <th scope="col">Title</th>
+                <th scope="col">Category</th>
                 <th scope="col">Image</th>
                 <th scope="col">Description</th>
                 <th scope="col">Languages</th>
@@ -39,6 +40,7 @@
                 <tr>
                     <th scope="row">{{ $project->title }}</th>
                     {{-- <td>{{ $project->url_image }}</td> --}}
+                    <th>{{ $project->type->name }}</th>
                     <td><img class="img-thumbnail" src="{{ $project->url_image }}" alt="{{ $project->title }}" style="width: 200px;"></td>
                     <td class="text-center">{{ $project->description }}</td>
                     <td>{{ $project->languages }}</td>

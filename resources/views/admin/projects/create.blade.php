@@ -25,6 +25,20 @@
         </div>
 
         <div class="mb-3">
+            <label for="type" class="form-label">Type</label>
+            <select class="form-select @error('type_id') is-invalid @enderror" id="type" name="type_id">
+                <option selected>Select Type</option>
+
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+            </select>
+            <div class="invalid-feedback">
+                @error('type_id') {{ $message }} @enderror
+            </div>
+        </div>
+
+        <div class="mb-3">
             <label for="url_image" class="form-label">Url Image</label>
             <input type="text" class="form-control @error('url_image') is-invalid @enderror" id="url_image" name="url_image"
                 value="{{ old('url_image') }}">
