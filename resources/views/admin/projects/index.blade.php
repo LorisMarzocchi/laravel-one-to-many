@@ -74,19 +74,12 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <form
-                        id="confirm-delete"
-                        action=""
-                        method="post"
-                        data-template="{{ route('admin.projects.destroy', ['project' => '*****']) }}"
-
-
-                        class="d-inline-block"
-                    >
+                    <form class="d-inline-block" method="POST" action="{{ route('admin.projects.destroy', ['project' => $project->id]) }}">
                         @csrf
                         @method('delete')
-                        <button class="btn btn-danger">Yes</button>
+                        <button class="btn btn-danger">Delete</button>
                     </form>
+
                 </div>
             </div>
         </div>

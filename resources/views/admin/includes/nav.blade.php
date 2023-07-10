@@ -21,11 +21,24 @@
                         Projects
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('admin.projects.index') }}">Index</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.projects.index') }}">Project Index</a></li>
                         <li><a class="dropdown-item" href="{{ route('admin.projects.create') }}">Add Project</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Project Types
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('admin.types.index') }}">Type Index</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.types.create') }}">Add New Project Type</a></li>
+                    </ul>
+                </li>
             </ul>
+
+
+
             <ul class=" menuRight navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

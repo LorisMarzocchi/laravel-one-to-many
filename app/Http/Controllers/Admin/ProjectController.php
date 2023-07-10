@@ -126,12 +126,12 @@ class ProjectController extends Controller
         $data= $request->all();
 
 
-        $project->title = $data['title'];
-        $project->type_id = $data['type_id'];
-        $project->url_image = $data['url_image'];
-        $project->description = $data['description'];
-        $project->languages = $data['languages'];
-        $project->link_github = $data['link_github'];
+        $project->title         = $data['title'];
+        $project->type_id       = $data['type_id'];
+        $project->url_image     = $data['url_image'];
+        $project->description   = $data['description'];
+        $project->languages     = $data['languages'];
+        $project->link_github   = $data['link_github'];
         $project->update();
 
         return to_route('admin.projects.show', ['project' => $project]);
