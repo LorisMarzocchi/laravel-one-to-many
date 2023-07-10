@@ -2,6 +2,7 @@
 
 return [
     [
+        "type_id" => "2",
         "title"            => "Html Css Bootstrap Dashboard",
         "url_image"        => "https://picsum.photos/id/20/200/300",
         "description"      => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae provident illum sapiente expedita beatae.",
@@ -16,6 +17,7 @@ return [
         "link_github"      => "https://github.com/LorisMarzocchi/html-css-spotifyweb",
     ],
     [
+        "type_id" => "2",
         "title"            => "Js Social Posts",
         "url_image"        => "https://picsum.photos/id/15/200/300",
         "description"      => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae provident illum sapiente expedita beatae.",
@@ -23,6 +25,8 @@ return [
         "link_github"      => "https://github.com/LorisMarzocchi/js-social-posts",
     ],
     [
+        "type_id" => "2",
+
         "title"            => "Vite Boolflix",
         "url_image"        => "https://picsum.photos/id/11/200/300",
         "description"      => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae provident illum sapiente expedita beatae.",
@@ -30,6 +34,8 @@ return [
         "link_github"      => "https://github.com/LorisMarzocchi/vite-boolflix",
     ],
     [
+        "type_id" => "2",
+
         "title"            => "Project Barber-Shop",
         "url_image"        => "https://picsum.photos/id/" . rand(1,270) . "/200/300",
         "description"      => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae provident illum sapiente expedita beatae.",
@@ -37,6 +43,8 @@ return [
         "link_github"      => "https://github.com/LorisMarzocchi/proj-html-vuejs",
     ],
     [
+        "type_id" => "2",
+
         "title"            => "Laravel DC Comics",
         "url_image"        => "https://picsum.photos/id/50/200/300",
         "description"      => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae provident illum sapiente expedita beatae.",
