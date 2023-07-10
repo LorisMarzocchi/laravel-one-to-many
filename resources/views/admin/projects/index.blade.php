@@ -74,9 +74,9 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                     <form
                         id="confirm-delete"
-                        action="{{ route('admin.projects.destroy', ['project' => $project->id]) }}"
+                        action=""
                         method="post"
-                        {{-- data-template="{{ route('admin.projects.destroy', ['project' => '*****']) }}" --}}
+                        data-template="{{ route('admin.projects.destroy', ['project' => '*****']) }}"
 
 
                         class="d-inline-block"

@@ -6,6 +6,7 @@
         <div class="card-body">
             <h3>{{ $project->title }}</h3>
             <p>{{ Str::limit($project->description, 150, '...') }}</p>
+            <h5>Type: {{ $project->type->name }}</h5>
             <h5>
                 <span class="text-danger">Languages:</span>
                 {{ $project->languages }}
